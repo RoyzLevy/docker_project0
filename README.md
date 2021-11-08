@@ -13,3 +13,4 @@ Steps for app development with Docker:
 Docker Compose:
 
 In order to do stuff more efficient - we will use docker-compose file, which will allow us to compose some containers running method in the same file.
+It also takes care of a network for the containers so we don't need to add one manually.
