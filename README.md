@@ -8,3 +8,8 @@ Steps for app development with Docker:
 3. Create network for the docker containers to be able to communicate with them - ```docker network create network_name```
 4. Run the containers using their images: ```docker run -d -p port:port -e ADDITIONAL_VAR=var_value -e ADDITIONAL_VAR2=var2_value --net network_name --name container_name image_name:version```
 5. Create app locally with help of containerized apps that you've installed.
+
+
+Docker Compose:
+
+In order to do stuff more efficient - we will use docker-compose file.
