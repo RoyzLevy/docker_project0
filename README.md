@@ -1,7 +1,7 @@
 # docker_project0
 Project for nodejs development with Docker
 
-Steps for app development with Docker:
+**Steps for app development with Docker:**
 
 1. Install docker on the hosting machine.
 2. Pull the needed docker images from private/public docker hub - ```docker pull image_name:version```
@@ -15,8 +15,13 @@ Steps for app development with Docker:
   ```docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password --net mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodb mongo-express```
 6. Create app locally with help of containerized apps that you've installed.
 
+---------------------------------------------------------------
 
-Docker Compose:
+**Docker Compose:**
 
 In order to do stuff more efficient - we will use docker-compose file, which will allow us to compose some containers running method in the same file.
 It also takes care of a network for the containers so we don't need to add one manually.
+
+**Dockerizing our app (with Docker file):**
+
+Every image that we create is based on another image, making it a layered architecture - our app when creating the image with the Docker file will be based on node:13-alpine image, which is in turn based on alpine:3.10 image. The FROM command in the Docker file is the one which decides the base image.
