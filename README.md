@@ -25,3 +25,13 @@ It also takes care of a network for the containers so we don't need to add one m
 **Dockerizing our app (with Docker file):**
 
 Every image that we create is based on another image, making it a layered architecture - our app when creating the image with the Docker file will be based on node:13-alpine image, which is in turn based on alpine:3.10 image. The FROM command in the Docker file is the one which decides the base image.
+
+Each time we make changes we need to stop the container, remove the image and recreate it with the new file.
+
+
+--------------------------------------------------------
+
+**AWS ECR (Elastic Container Registry)**
+
+AWS allows only one image per repository, but different versions for the same image are allowed.
+In ECR there is 'View push commands' for pushing the built image to the private/public repo.
