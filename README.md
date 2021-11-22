@@ -28,6 +28,8 @@ Every image that we create is based on another image, making it a layered archit
 
 Each time we make changes we need to stop the container, remove the image and recreate it with the new file.
 
+- Note: best is to order the layers by the frequency in which they change, to support the caching of layers.
+
 
 --------------------------------------------------------
 
