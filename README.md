@@ -13,13 +13,14 @@ Project for nodejs development with Docker
   
   And mongo-express:
   ```docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password --net mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodb mongo-express```
+
 6. Create app locally with help of containerized apps that you've installed.
 
 ---------------------------------------------------------------
 
 **Docker Compose:**
 
-In order to do stuff more efficient - we will use docker-compose file, which will allow us to compose some containers running method in the same file.
+In order to do stuff more efficient - we will use docker-compose yaml file, which will allow us to compose some containers running method in the same file.
 It also takes care of a network for the containers so we don't need to add one manually.
 
 **Dockerizing our app (with Docker file):**
